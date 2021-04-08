@@ -4,7 +4,9 @@
 const express = require("express");
 const postsRouter = require("./posts/posts-router");
 const server = express();
+const cors = require("cors")
 
+server.use(cors())
 server.use(express.json());
 server.use("/api/posts", postsRouter);
 
